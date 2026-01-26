@@ -1,0 +1,222 @@
+{
+  "info": {
+    "name": "Enhanced Notes API Tests",
+    "description": "Test voice recording, image upload, and enhanced note features"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8081/api"
+    },
+    {
+      "key": "authToken",
+      "value": "Bearer YOUR_JWT_TOKEN_HERE"
+    },
+    {
+      "key": "noteId",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Create Enhanced Note",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{authToken}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Test Enhanced Note\",\n  \"content\": \"This is a test note for multimedia content\",\n  \"category\": \"test\",\n  \"noteType\": \"MIXED\",\n  \"formattedContent\": \"This is <b>bold</b> and <i>italic</i> text\",\n  \"checklistItems\": [\n    {\n      \"itemText\": \"Test task 1\",\n      \"isChecked\": false,\n      \"itemOrder\": 0\n    },\n    {\n      \"itemText\": \"Test task 2\",\n      \"isChecked\": true,\n      \"itemOrder\": 1\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/notes/enhanced",
+          "host": ["{{baseUrl}}"],
+          "path": ["notes", "enhanced"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Note created successfully\", function () {",
+              "    pm.response.to.have.status(200);",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "    pm.expect(jsonData.data.id).to.exist;",
+              "    pm.collectionVariables.set(\"noteId\", jsonData.data.id);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Upload Voice Note",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{authToken}}"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "test_audio.3gp"
+            },
+            {
+              "key": "noteId",
+              "value": "{{noteId}}"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/notes/upload/voice",
+          "host": ["{{baseUrl}}"],
+          "path": ["notes", "upload", "voice"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Voice uploaded successfully\", function () {",
+              "    pm.response.to.have.status(200);",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "    pm.expect(jsonData.data.fileUrl).to.exist;",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Upload Image",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{authToken}}"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "test_image.jpg"
+            },
+            {
+              "key": "noteId",
+              "value": "{{noteId}}"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/notes/upload/image",
+          "host": ["{{baseUrl}}"],
+          "path": ["notes", "upload", "image"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Image uploaded successfully\", function () {",
+              "    pm.response.to.have.status(200);",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "    pm.expect(jsonData.data).to.contain('http');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Get Enhanced Note",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{authToken}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/notes/enhanced/{{noteId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["notes", "enhanced", "{{noteId}}"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Enhanced note retrieved with all data\", function () {",
+              "    pm.response.to.have.status(200);",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "    pm.expect(jsonData.data.formattedContent).to.exist;",
+              "    pm.expect(jsonData.data.checklistItems).to.be.an('array');",
+              "    pm.expect(jsonData.data.mediaAttachments).to.be.an('array');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Get Note Media",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{authToken}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/notes/{{noteId}}/media",
+          "host": ["{{baseUrl}}"],
+          "path": ["notes", "{{noteId}}", "media"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Media files retrieved\", function () {",
+              "    pm.response.to.have.status(200);",
+              "    var jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "    pm.expect(jsonData.data).to.be.an('array');",
+              "    pm.expect(jsonData.data.length).to.be.greaterThan(0);",
+              "});"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
