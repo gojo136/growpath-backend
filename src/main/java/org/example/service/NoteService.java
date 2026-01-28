@@ -47,12 +47,20 @@ public class NoteService {
     public NoteResponse createNote(Long userId, CreateNoteRequest request) {
         logger.info("Creating note for user: {}", userId);
 
+        // Validate inputs
+        if (request.getContent() == null || request.getContent().trim().isEmpty()) {
+            throw new IllegalArgumentException("Content is required");
+        }
+
         Note note = new Note(
                 userId,
                 request.getTitle() != null ? request.getTitle().trim() : null,
                 request.getContent().trim(),
                 request.getCategory() != null ? request.getCategory().trim() : null
         );
+        
+        // Ensure checkboxData is null for regular notes
+        note.setCheckboxData(null);
 
         Note savedNote = noteRepository.save(note);
         logger.info("Note created successfully with ID: {}", savedNote.getId());
@@ -196,7 +204,12 @@ public class NoteService {
                 note.setHasChecklist(true);
             } catch (Exception e) {
                 logger.error("Failed to serialize checkbox data", e);
+                note.setCheckboxData(null);
+                note.setHasChecklist(false);
             }
+        } else {
+            note.setCheckboxData(null);
+            note.setHasChecklist(false);
         }
 
         Note savedNote = noteRepository.save(note);

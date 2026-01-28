@@ -10,12 +10,4 @@
       </profile>
     </annotationProcessing>
   </component>
-<<<<<<< Updated upstream
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="SelfGrowth_Backend" options="-parameters" />
-    </option>
-  </component>
-=======
->>>>>>> Stashed changes
 </project>

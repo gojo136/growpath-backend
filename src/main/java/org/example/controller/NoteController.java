@@ -52,19 +52,33 @@ public class NoteController {
             @Valid @RequestBody CreateNoteRequest request,
             Authentication authentication) {
 
-        Long userId = (Long) authentication.getPrincipal();
-        System.out.println("=================================================");
-        System.out.println("🔥🔥🔥 CREATE NOTE REQUEST RECEIVED 🔥🔥🔥");
-        System.out.println("🔥 User ID: " + userId);
-        System.out.println("🔥 Title: " + request.getTitle());
-        System.out.println("🔥 Content Length: " + (request.getContent() != null ? request.getContent().length() : 0));
-        System.out.println("🔥 Category: " + request.getCategory());
-        System.out.println("=================================================");
+        try {
+            Long userId = (Long) authentication.getPrincipal();
+            if (userId == null) {
+                return ResponseEntity.badRequest()
+                    .body(ApiResponse.error("Invalid user authentication"));
+            }
+            
+            System.out.println("=================================================");
+            System.out.println("🔥🔥🔥 CREATE NOTE REQUEST RECEIVED 🔥🔥🔥");
+            System.out.println("🔥 User ID: " + userId);
+            System.out.println("🔥 Title: " + request.getTitle());
+            System.out.println("🔥 Content Length: " + (request.getContent() != null ? request.getContent().length() : 0));
+            System.out.println("🔥 Category: " + request.getCategory());
+            System.out.println("=================================================");
 
-        NoteResponse response = noteService.createNote(userId, request);
-        System.out.println("✅ Note created successfully with ID: " + response.getId());
+            NoteResponse response = noteService.createNote(userId, request);
+            System.out.println("✅ Note created successfully with ID: " + response.getId());
 
-        return ResponseEntity.ok(ApiResponse.success("Note created successfully", response));
+            return ResponseEntity.ok(ApiResponse.success("Note created successfully", response));
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest()
+                .body(ApiResponse.error("Invalid input: " + e.getMessage()));
+        } catch (Exception e) {
+            System.err.println("❌ Error creating note: " + e.getMessage());
+            return ResponseEntity.internalServerError()
+                .body(ApiResponse.error("Failed to create note"));
+        }
     }
 
     /**

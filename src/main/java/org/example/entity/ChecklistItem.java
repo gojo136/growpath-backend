@@ -47,7 +47,7 @@ public class ChecklistItem {
     private LocalDateTime updatedAt;
 
     // Constructors
-
+    public ChecklistItem() {}
 
     public ChecklistItem(Long noteId, Long userId, String itemText, Boolean isChecked, Integer itemOrder) {
         this.noteId = noteId;

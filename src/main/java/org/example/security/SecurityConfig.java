@@ -48,7 +48,9 @@ public class SecurityConfig {
                 "http://localhost:3000",
                 "http://10.0.2.2:3000",
                 "http://localhost:8080",
-                "http://10.0.2.2:8080"));
+                "http://10.0.2.2:8080",
+                "http://localhost:8082",
+                "http://10.0.2.2:8082"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Accept"));
         configuration.setExposedHeaders(Arrays.asList("Authorization", "X-Auth-Token", "X-Token-Expiry"));

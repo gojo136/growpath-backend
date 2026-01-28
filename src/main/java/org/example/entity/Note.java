@@ -58,7 +58,7 @@ public class Note {
     @Column(name = "has_formatting")
     private Boolean hasFormatting = false;
 
-    @Column(columnDefinition = "JSONB")
+    @Column(columnDefinition = "TEXT")
     private String checkboxData; // JSON string for checkbox items
 
     @Column(name = "is_pinned", nullable = false)

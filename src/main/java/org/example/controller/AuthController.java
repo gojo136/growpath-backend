@@ -19,11 +19,21 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
-@CrossOrigin(origins = {"http://localhost:3000", "http://10.0.2.2:3000", "http://10.0.2.2:8081"}, allowCredentials = "true")
+@CrossOrigin(origins = {"http://localhost:3000", "http://10.0.2.2:3000", "http://10.0.2.2:8081", "http://localhost:8082", "http://10.0.2.2:8082"}, allowCredentials = "true")
 public class AuthController {
         
     @Autowired
     private AuthService authService;
+    
+    /** Public health check – no auth required. Use to verify backend is running. */
+    @GetMapping("/health")
+    public ResponseEntity<ApiResponse<java.util.Map<String, Object>>> health() {
+        java.util.Map<String, Object> data = new java.util.HashMap<>();
+        data.put("status", "UP");
+        data.put("service", "SelfGrowth Backend");
+        data.put("timestamp", System.currentTimeMillis());
+        return ResponseEntity.ok(ApiResponse.success("Backend is running", data));
+    }
     
     @PostMapping("/signup")
     public ResponseEntity<ApiResponse<SignupResponse>> signup(@Validated(RegularSignup.class) @RequestBody SignupRequest request) {
