@@ -21,11 +21,15 @@ public class SupabaseStorageConfig {
     @Value("${supabase.storage.bucket.audio:note-audio}")
     private String audioBucket;
 
+    @Value("${supabase.storage.bucket.voice:voice-notes}")
+    private String voiceBucket;
+
     public String getSupabaseUrl() { return supabaseUrl; }
     public String getSupabaseAnonKey() { return supabaseAnonKey; }
     public String getSupabaseServiceKey() { return supabaseServiceKey; }
     public String getImagesBucket() { return imagesBucket; }
     public String getAudioBucket() { return audioBucket; }
+    public String getVoiceBucket() { return voiceBucket; }
 
     public String getStorageUrl() {
         return supabaseUrl + "/storage/v1";

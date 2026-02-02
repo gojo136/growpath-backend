@@ -16,6 +16,18 @@ public class SupabaseStorageService {
 
     private final OkHttpClient httpClient = new OkHttpClient();
 
+    public String uploadFile(MultipartFile file, String bucket, Long userId) throws IOException {
+        if (bucket.equals("journal-photos")) {
+            validateImageFile(file);
+            return uploadToSupabase(file, storageConfig.getImagesBucket(), generateFileName("journal", userId, 0L, getFileExtension(file.getOriginalFilename())));
+        } else if (bucket.equals("journal-voice")) {
+            validateAudioFile(file);
+            return uploadToSupabase(file, storageConfig.getAudioBucket(), generateFileName("journal_voice", userId, 0L, getFileExtension(file.getOriginalFilename())));
+        } else {
+            throw new IOException("Unsupported bucket: " + bucket);
+        }
+    }
+
     public String saveImageFile(MultipartFile file, Long userId, Long noteId) throws IOException {
         validateImageFile(file);
         String fileName = generateFileName("img", userId, noteId, getFileExtension(file.getOriginalFilename()));
@@ -28,12 +40,18 @@ public class SupabaseStorageService {
         return uploadToSupabase(file, storageConfig.getAudioBucket(), fileName);
     }
 
+    public String saveVoiceNoteFile(MultipartFile file, Long userId) throws IOException {
+        validateAudioFile(file);
+        String fileName = generateFileName("voice", userId, 0L, getFileExtension(file.getOriginalFilename()));
+        return uploadToSupabase(file, storageConfig.getVoiceBucket(), fileName);
+    }
+
     private String uploadToSupabase(MultipartFile file, String bucket, String fileName) throws IOException {
         String uploadUrl = storageConfig.getStorageUrl() + "/object/" + bucket + "/" + fileName;
 
         RequestBody requestBody = RequestBody.create(
-                MediaType.parse(file.getContentType()),
-                file.getBytes());
+                file.getBytes(),
+                MediaType.parse(file.getContentType()));
 
         Request request = new Request.Builder()
                 .url(uploadUrl)
@@ -113,10 +131,12 @@ public class SupabaseStorageService {
     }
 
     private String extractBucketFromUrl(String url) {
-        if (url.contains("/note-images/"))
+        if (url.contains("/" + storageConfig.getImagesBucket() + "/"))
             return storageConfig.getImagesBucket();
-        if (url.contains("/note-audio/"))
+        if (url.contains("/" + storageConfig.getAudioBucket() + "/"))
             return storageConfig.getAudioBucket();
+        if (url.contains("/" + storageConfig.getVoiceBucket() + "/"))
+            return storageConfig.getVoiceBucket();
         return "default";
     }
 }

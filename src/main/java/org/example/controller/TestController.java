@@ -31,7 +31,7 @@ public class TestController {
      */
     @GetMapping("/verify-features/{noteId}")
     public ResponseEntity<ApiResponse<Map<String, Object>>> verifyEnhancedFeatures(
-            @PathVariable Long noteId,
+            @PathVariable("noteId") Long noteId,
             Authentication authentication) {
 
         Long userId = (Long) authentication.getPrincipal();
@@ -138,7 +138,7 @@ public class TestController {
      */
     @GetMapping("/validate-uploads/{noteId}")
     public ResponseEntity<ApiResponse<Map<String, Object>>> validateUploads(
-            @PathVariable Long noteId,
+            @PathVariable("noteId") Long noteId,
             Authentication authentication) {
 
         Long userId = (Long) authentication.getPrincipal();

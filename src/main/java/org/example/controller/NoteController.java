@@ -315,7 +315,7 @@ public class NoteController {
      */
     @GetMapping("/{noteId}/media")
     public ResponseEntity<ApiResponse<List<MediaAttachmentResponse>>> getNoteMedia(
-            @PathVariable Long noteId,
+            @PathVariable("noteId") Long noteId,
             Authentication authentication) {
 
         Long userId = (Long) authentication.getPrincipal();
@@ -343,7 +343,7 @@ public class NoteController {
      */
     @DeleteMapping("/media/{mediaId}")
     public ResponseEntity<ApiResponse<Void>> deleteMedia(
-            @PathVariable Long mediaId,
+            @PathVariable("mediaId") Long mediaId,
             Authentication authentication) {
 
         Long userId = (Long) authentication.getPrincipal();
@@ -385,7 +385,7 @@ public class NoteController {
      */
     @PostMapping("/{noteId}/checklist")
     public ResponseEntity<ApiResponse<List<ChecklistItemResponse>>> saveChecklistItems(
-            @PathVariable Long noteId,
+            @PathVariable("noteId") Long noteId,
             @RequestBody List<ChecklistItemRequest> items,
             Authentication authentication) {
 
@@ -396,7 +396,7 @@ public class NoteController {
 
     @GetMapping("/{noteId}/checklist")
     public ResponseEntity<ApiResponse<List<ChecklistItemResponse>>> getChecklistItems(
-            @PathVariable Long noteId,
+            @PathVariable("noteId") Long noteId,
             Authentication authentication) {
 
         Long userId = (Long) authentication.getPrincipal();
@@ -409,7 +409,7 @@ public class NoteController {
 
     @PutMapping("/checklist/{itemId}")
     public ResponseEntity<ApiResponse<ChecklistItemResponse>> updateChecklistItem(
-            @PathVariable Long itemId,
+            @PathVariable("itemId") Long itemId,
             @RequestBody ChecklistItemRequest request,
             Authentication authentication) {
 
@@ -420,7 +420,7 @@ public class NoteController {
 
     @DeleteMapping("/checklist/{itemId}")
     public ResponseEntity<ApiResponse<Void>> deleteChecklistItem(
-            @PathVariable Long itemId,
+            @PathVariable("itemId") Long itemId,
             Authentication authentication) {
 
         Long userId = (Long) authentication.getPrincipal();
