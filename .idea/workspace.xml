@@ -5,66 +5,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71fbe978-3590-4b68-9ffb-50d8152cfad8" name="Changes" comment="Sefl-Growth">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/config/SupabaseStorageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/config/SupabaseStorageConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/NoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/NoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/SupabaseStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/SupabaseStorageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/SelfGrowthBackendApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SelfGrowthBackendApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SerializationTestRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SerializationTestRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/config/JacksonConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/config/JacksonConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/config/SupabaseStorageConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/config/SupabaseStorageConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/AlarmController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/AlarmController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/JournalEntryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/JournalEntryController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/NoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/NoteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/StudyPlanController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/StudyPlanController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/TaskController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/TaskController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/TestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/controller/VoiceNoteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/controller/VoiceNoteController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/CheckboxDataDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/CheckboxDataDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/CheckboxItemDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/CheckboxItemDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/ChecklistItemRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/ChecklistItemRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/CreateJournalEntryRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/CreateJournalEntryRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/CreateNoteRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/CreateNoteRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/CreateTaskRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/CreateTaskRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/EnhancedCreateNoteRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/EnhancedCreateNoteRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/FormattingRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/FormattingRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/GoogleSignInRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/GoogleSignInRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/LoginRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/SetPasswordRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/SetPasswordRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/SignupRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/SignupRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/StudyPlanRequest$SessionRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/StudyPlanRequest$SessionRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/StudyPlanRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/StudyPlanRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/UpdateNoteRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/UpdateNoteRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/request/UpdateTaskRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/request/UpdateTaskRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/ApiResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/ChecklistItemResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/ChecklistItemResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/EnhancedNoteResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/EnhancedNoteResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/FormattingResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/FormattingResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/JournalEntryResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/JournalEntryResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/LoginResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/LoginResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/MediaAttachmentResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/MediaAttachmentResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/NoteResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/NoteResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/SignupResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/SignupResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/StudyPlanResponse$SessionResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/StudyPlanResponse$SessionResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/StudyPlanResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/StudyPlanResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/TaskResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/TaskResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/dto/response/VoiceNoteResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/dto/response/VoiceNoteResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/Alarm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Alarm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/ChecklistItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/ChecklistItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/JournalEntry$Mood.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/JournalEntry$Mood.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/JournalEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/JournalEntry.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/MediaAttachment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/MediaAttachment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/Note$NoteType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Note$NoteType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/Note.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Note.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/NoteFormatting$FormatType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/NoteFormatting$FormatType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/NoteFormatting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/NoteFormatting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/StudyPlan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/StudyPlan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/StudySession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/StudySession.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/StudySessionLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/StudySessionLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/Task$Priority.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Task$Priority.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/Task$RepeatType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Task$RepeatType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/Task$Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Task$Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/Task.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/entity/VoiceNote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/entity/VoiceNote.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/exception/EmailAlreadyExistsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/exception/EmailAlreadyExistsException.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/exception/GlobalExceptionHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/exception/GoogleAuthExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/exception/GoogleAuthExceptionHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/exception/ResourceNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/exception/ResourceNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/repository/AlarmRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/repository/AlarmRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/repository/ChecklistItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/repository/ChecklistItemRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/repository/JournalEntryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/repository/JournalEntryRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/repository/MediaAttachmentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/repository/MediaAttachmentRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/repository/NoteFormattingRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/repository/NoteFormattingRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/repository/NoteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/repository/NoteRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/repository/StudyPlanRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/repository/StudyPlanRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/repository/StudySessionLogRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/repository/StudySessionLogRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/repository/StudySessionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/repository/StudySessionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/repository/TaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/repository/TaskRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/repository/VoiceNoteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/repository/VoiceNoteRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/security/CustomUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/security/CustomUserDetailsService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/security/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/security/JwtAuthenticationFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/security/JwtTokenProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/security/JwtTokenProvider.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/AlarmService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/AlarmService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/AuthService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/FileStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/FileStorageService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/GoogleTokenVerificationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/GoogleTokenVerificationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/JournalEntryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/JournalEntryService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/NoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/NoteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/StudyPlanService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/StudyPlanService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/SupabaseStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/SupabaseStorageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/TaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/TaskService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/service/VoiceNoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/service/VoiceNoteService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769589896484</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Sefl-Growth">
+      <option name="closed" value="true" />
+      <created>1770025011959</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1770025011959</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
